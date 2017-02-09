@@ -2,14 +2,6 @@
 
 module.exports = function(environment) {
   var ENV = {
-    contentSecurityPolicy: {
-        'script-src':  "*",
-        'font-src':    "*",
-        'connect-src': "'self' wss://fv-character-portfolio-ui-cthulhu8zombie.c9users.io:8081/",
-        'style-src':   "'self' https://fv-character-portfolio-ui-cthulhu8zombie.c9users.io:8081/",
-        'object-src':  "*",
-        'img-src':     "*"
-    },
     modulePrefix: 'fvchar',
     environment: environment,
     rootURL: '/',
@@ -37,9 +29,28 @@ module.exports = function(environment) {
     // ENV.APP.LOG_TRANSITIONS = true;
     // ENV.APP.LOG_TRANSITIONS_INTERNAL = true;
     // ENV.APP.LOG_VIEW_LOOKUPS = true;
+    
+    // contentSecurityPolicy key in the ENV variable. This allows for live reloading
+    ENV.contentSecurityPolicy = {
+        'script-src':  "*",
+        'font-src':    "*",
+        'connect-src': "'self' wss://fv-character-portfolio-ui-cthulhu8zombie.c9users.io:8081/",
+        'style-src':   "'self' https://fv-character-portfolio-ui-cthulhu8zombie.c9users.io:8081/",
+        'object-src':  "*",
+        'img-src':     "*"
+    };
   }
 
   if (environment === 'test') {
+    // contentSecurityPolicy key in the ENV variable. This allows for live reloading
+    ENV.contentSecurityPolicy = {
+        'script-src':  "*",
+        'font-src':    "*",
+        'connect-src': "'self' wss://fv-character-portfolio-ui-cthulhu8zombie.c9users.io:8081/",
+        'style-src':   "'self' https://fv-character-portfolio-ui-cthulhu8zombie.c9users.io:8081/",
+        'object-src':  "*",
+        'img-src':     "*"
+    };
     // Testem prefers this...
     ENV.locationType = 'none';
 
