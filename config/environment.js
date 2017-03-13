@@ -34,8 +34,8 @@ module.exports = function(environment) {
     ENV.contentSecurityPolicy = {
         'script-src':  "*",
         'font-src':    "*",
-        'connect-src': "'self' wss://fv-character-portfolio-ui-cthulhu8zombie.c9users.io:8081/",
-        'style-src':   "'self' https://fv-character-portfolio-ui-cthulhu8zombie.c9users.io:8081/",
+        'connect-src': "'self' wss://*.c9users.io:8081/",
+        'style-src':   "'self' https://*.c9users.io:8081/",
         'object-src':  "*",
         'img-src':     "*"
     };
@@ -46,8 +46,8 @@ module.exports = function(environment) {
     ENV.contentSecurityPolicy = {
         'script-src':  "*",
         'font-src':    "*",
-        'connect-src': "'self' wss://fv-character-portfolio-ui-cthulhu8zombie.c9users.io:8081/",
-        'style-src':   "'self' https://fv-character-portfolio-ui-cthulhu8zombie.c9users.io:8081/",
+        'connect-src': "'self' wss://*.c9users.io:8081/",
+        'style-src':   "'self' https://*.c9users.io:8081/",
         'object-src':  "*",
         'img-src':     "*"
     };
